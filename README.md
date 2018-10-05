@@ -1,3 +1,5 @@
+[![PyPI version](https://badge.fury.io/py/django-keychain.svg)](https://badge.fury.io/py/django-keychain)
+
 # django_keychain
 
 Django plugin that pulls secrets from AWS Secrets Manager.
