@@ -2,6 +2,10 @@
 
 Django plugin that pulls secrets from AWS Secrets Manager.
 
+**Installation**
+
+`pip install django-keychain`
+
 **Usage**
 
 Make sure you set up your AWS creadentials as you would for using `boto3`.
