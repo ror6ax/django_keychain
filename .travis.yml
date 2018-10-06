@@ -1,19 +1,15 @@
 language: python
 python:
-  - "2.7"
-  - "3.6"
-
+- '2.7'
+- '3.6'
 env:
-  - DJANGO_VERSION=2.1.2
-
+- DJANGO_VERSION=2.1.2
 install:
-  - pip install -r requirements.txt
-
+- pip install -r requirements.txt
 script:
-  - python runtests.py
-  
+- python runtests.py
 deploy:
   provider: pypi
   user: ror6ax
   password:
-    secure: "Your password"
+    secure: q6pgLQ3VhLe/PPk3susw1qP1uvfgxgTH3zdZZRojHQkbdNnbqWoJszoAiy+o0deTYMsyCJZ2qllsjl0LxhhZz6bilBg8/RphDpZYM31vNMbNwxXLrRibVmSqCTkb3s4lFI/N0pZvKL0jtGTVjveTbnK3exOwXC5HsvXYrP0EOKxzGch2qMV6bbv6eEmBbPRgfvuxRFGStJkcyfY7Q80+3nfVUdHWAc/AflljHzf2Rla2YmQp39sf+iVxLIblvBid4DPYQEXtHNU0svcBO5cuEfPc1kpYzVaqk0FLReLQbuum4E/uzehzn7e36wG1qWBiz+fJSE1/7TnC8ZwXzc1by4c6FzomVm/fuzeFQpyOpnWUJwAxZvPCJ7sjW+r4ydJvuMpkByo1NMP5X8uB95xpym7HWEloXI6Dwsm3jK5WG+dckMATcLJMOK5iOtWiU3QiIyj6rDKyW7fC4EDJrvKEJB+UUisGdxeplSZ4FLoDT+6Cht5UI2UcxL63/unJ/NdzVO6X+nW0sD7JaLoVC2eaCs6WjwMWjjX547uv4h3GQ4LHGR5TRgJ59RvWXymi8ogsuswCbmrtcb+YhyfWGorNJ/rMvBMReZSVShuoUcqYsCdMNVm+yCUMKpUCie+FwejiXqSxXCb7K7NUNdWgvipiZk3FeImVbIVQV69AeIITDwA=
