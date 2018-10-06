@@ -2,4 +2,4 @@ Django
 boto3
 pylama
 pycodestyle
-maccabe
+mccabe
