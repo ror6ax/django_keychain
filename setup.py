@@ -7,5 +7,4 @@ setup(name='django_keychain',
       author_email='ror6ax@gmail.com',
       packages=['django_keychain'],
       install_requires=[
-          'boto3',],
-     )
+          'boto3',])
