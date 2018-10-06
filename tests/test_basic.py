@@ -20,5 +20,3 @@ class KeychainTestCase(SimpleTestCase):
     def test_read_unexisting_secret(self):
         key = self.keychain.get_secret("TESTSECRET3", "TESTKEY1")
         self.assertIsNone(key)
-
-

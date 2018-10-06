@@ -1,13 +1,11 @@
 #!/usr/bin/env python
 import os
 import sys
-
-os.environ['DJANGO_SETTINGS_MODULE'] = 'tests.test_settings'
-
 import django
 from django.conf import settings
 from django.test.utils import get_runner
 
+os.environ['DJANGO_SETTINGS_MODULE'] = 'tests.test_settings'
 if __name__ == "__main__":
     if hasattr(django, 'setup'):
         django.setup()
