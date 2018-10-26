@@ -15,7 +15,7 @@ class KeychainTestCase(SimpleTestCase):
 
         response = {
             'Name': 'TESTSECRET2',
-            'SecretString': 'testvalue',
+            'SecretString': '{"TESTKEY1": "testvalue"}',
             'VersionStages': [
                 '1',
             ],
@@ -31,5 +31,5 @@ class KeychainTestCase(SimpleTestCase):
         self.keychain.get_client = client
 
     def test_read_existing_plaintext_secret(self):
-        key = self.keychain.get_secret("TESTSECRET2")
+        key = self.keychain.get_secret("TESTSECRET2", "TESTKEY1")
         self.assertEquals(key, 'testvalue')
