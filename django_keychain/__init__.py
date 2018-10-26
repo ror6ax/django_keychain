@@ -7,8 +7,8 @@ from json import loads
 
 logger = logging.getLogger(__name__)
 
-class DjangoKeychain():
 
+class DjangoKeychain():
     def __init__(self, region):
         self.region = region
         self.endpoint_url = "https://secretsmanager.{}.amazonaws.com".format(region)
@@ -27,4 +27,4 @@ class DjangoKeychain():
         if key:
             return loads(secrets).get(key)
         else:
-            return secrets
+            return
