@@ -13,8 +13,12 @@ class DjangoKeychain():
         self.region = region
         self.endpoint_url = "https://secretsmanager.{}.amazonaws.com".format(region)
 
-    def _pull_secrets(self, secret_id):
+    def get_client(self):
         client = boto3.client('secretsmanager', region_name=self.region, endpoint_url=self.endpoint_url)
+        return client
+
+    def _pull_secrets(self, secret_id):
+        client = self.get_client
         r = client.get_secret_value(SecretId=secret_id)
         return r.get('SecretString')
 
