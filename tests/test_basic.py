@@ -9,8 +9,8 @@ from django_keychain import DjangoKeychain
 class KeychainTestCase(SimpleTestCase):
 
     def setUp(self):
-
-        client = botocore.session.get_session().create_client('secretsmanager', 'eu-west-1')
+        client = botocore.session.get_session().create_client('secretsmanager',
+                                                              'eu-west-1')
         stubber = Stubber(client)
 
         response = {
@@ -29,7 +29,6 @@ class KeychainTestCase(SimpleTestCase):
 
         self.keychain = DjangoKeychain("eu-west-1")
         self.keychain.get_client = client
-
 
     def test_read_existing_plaintext_secret(self):
         key = self.keychain.get_secret("TESTSECRET2")
