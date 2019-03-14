@@ -1,4 +1,5 @@
 [![PyPI version](https://badge.fury.io/py/django-keychain.svg)](https://badge.fury.io/py/django-keychain)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/django-keychain.svg?style=plastic)
 
 # django_keychain
 
